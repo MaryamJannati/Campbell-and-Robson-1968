@@ -3,11 +3,11 @@
 
 input("Are you ready to run the experiment? y/n: ","s");
 % -----current dir-----
-cd '/Users/nip-maryam/Documents/NIP lab Felix Wichmann/Campbell_Robson_1967/experiment';
+% cd '';
 
 % -----dir to save-----
 timestamp = datetime("today");
-saveDir   = '/Users/nip-maryam/Documents/NIP lab Felix Wichmann/Campbell_Robson_1967/data';
+% saveDir   = '';
 
 % -----setting up the mac keyboard-----
 %deviceIndices  = GetKeyboardIndices();
