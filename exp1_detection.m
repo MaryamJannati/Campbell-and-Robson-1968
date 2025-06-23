@@ -3,11 +3,11 @@
 
 input("Are you ready to run the experiment? y/n: ","s");
 % -----current dir-----
-cd '/Users/nip-maryam/Documents/NIP lab Felix Wichmann/Campbell_Robson_1967/experiment';
+% cd '';
 
 % -----dir to save-----
 timestamp = datetime("today");
-saveDir   = '/Users/nip-maryam/Documents/NIP lab Felix Wichmann/Campbell_Robson_1967/data';
+% saveDir   = '';
 
 
 % -----get info-----
@@ -162,47 +162,3 @@ writetable (data,file_path);
 
 sca;
 
-% % -----computing and plotting the CSF-----
-% x  = spatial frequencies (logarithmic)
-% y  = contrast sensitivity (1 / threshold)
-% ?  = what is the CS for each spatial frequency
-% CS = the smallest contrast which is visible at a spatial frequency 75% of times
-% filter for each wave, each spatial frequency, and find the lowest visible contrast
-% Psychometric Function: For each spatial frequency, plot the proportion of correct 
-% detections as a function of contrast. This forms a psychometric (S-shaped) curve
-% then see how many of times this contrast was visible among all (acc threshold)
-% example : hey sine waves all come here! check every single spatial frequencies you have. 
-% contrast was visible in which one of those spatial frequency?
-% among this visible contrasts which one of them is the smallest? 
-% ok come here the smallest contrast. tell me! how many times were you
-% visible among all the times you were presented?
-% psychometric function : x = contrast; y = correct detection
-
-% rpf   = zeros (1, length(contrasts)); % row of psychometric function
-% cpf   = zeros (1, length(frequencies)); % column of psychometric function
-% pfunc = [];        % psychometric function initial matrix 
-% 
-% for i = 1:cpf
-%     freq = frequencies(i);
-%     for j = 1: rfp
-%         cont = contrasts(j);
-%         cond = strcmp(data.wave_type, 'sine') & ...
-%                (data.spatial_frequency == freq) & ...
-%                (data.contrast == cont);
-%         correct = cond & (data.is_correct == 1);
-% 
-%         % Compute accuracy
-%         if sum(cond) > 0
-%             acc_sine = sum(correct) / sum(cond);
-%         else
-%             acc_sine = 0;  
-%         end
-% 
-%         % Store in pfunc(j, i): row = contrast index, col = frequency index
-%         pfunc = [pfunc; cont, acc_sine]; % psychometric function matrix
-%     end
-% end
-% 
-% figure;
-% plot (pfunc);
-% 
